@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 🌈 Animated Gradient Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #1f1c2c, #928dab, #2c3e50, #4ca1af);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* 🔄 Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🧊 Glassmorphism Card */
+.container {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 350px;
+    min-height: 45vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* 3D Depth */
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.3),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🧠 Hover 3D Lift */
+.container:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        inset 0 1px 2px rgba(255,255,255,0.3);
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+/* ✨ Inputs + Select */
+form select,
+form input {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: rgb(14, 11, 11);
+
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3),
+                inset -2px -2px 5px rgba(255,255,255,0.1);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔍 Focus Effect */
+form input:focus,
+form select:focus {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* 🚀 3D Button */
+button {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+    border: none;
+
+    background: linear-gradient(145deg, #3a3a3a, #1c1c1c);
+    color: rgb(243, 240, 240);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    /* 3D Button Effect */
+    box-shadow: 
+        5px 5px 15px rgba(0,0,0,0.4),
+        -5px -5px 15px rgba(255,255,255,0.1);
+
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Button Hover */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        8px 8px 20px rgba(0,0,0,0.5),
+        -3px -3px 10px rgba(255,255,255,0.1);
+}
+
+/* 👇 Button Click Effect */
+button:active {
+    transform: translateY(2px);
+    box-shadow: inset 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+/* 💬 Message Styling */
+.msg {
+    margin-top: 1rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* 🌟 Smooth Fade-in Animation */
+.container {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
